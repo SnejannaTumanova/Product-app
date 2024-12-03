@@ -8,6 +8,7 @@ import {
   Put,
   UseInterceptors,
   UploadedFile,
+  Query,
 } from '@nestjs/common';
 import { ProductsService } from './products.service';
 import { Product } from './product.entity';
@@ -27,6 +28,27 @@ export class ProductsController {
   @Get()
   findAll(): Promise<Product[]> {
     return this.productsService.findAll();
+  }
+
+  @Get('paginated')
+  async getProducts(@Query('page') page = 1, @Query('limit') limit = 10) {
+    return this.productsService.getPaginatedProducts(page, limit);
+  }
+
+  @Get('sorted')
+  async getSortedProducts(
+    @Query('sort') sort = 'name',
+    @Query('order') order: 'ASC' | 'DESC' = 'ASC',
+  ) {
+    return this.productsService.getSortedProducts(sort, order);
+  }
+
+  @Get('filtered')
+  async getFilteredProducts(
+    @Query('priceMin') priceMin?: number,
+    @Query('priceMax') priceMax?: number,
+  ) {
+    return this.productsService.getFilteredProducts(priceMin, priceMax);
   }
 
   @Get(':id')
@@ -61,10 +83,14 @@ export class ProductsController {
       }),
     }),
   )
-  uploadPhoto(
+  async uploadPhoto(
     @Param('id') id: string,
     @UploadedFile() file: Express.Multer.File,
   ) {
+    const product = await this.productsService.findOne(+id);
+    if (!product) {
+      throw new Error('Product not found');
+    }
     return { photo: file.filename };
   }
 }

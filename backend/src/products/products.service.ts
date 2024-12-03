@@ -15,8 +15,55 @@ export class ProductsService {
     return this.productRepository.save(product);
   }
 
+  async getPaginatedProducts(page: number, limit: number) {
+    page = Math.max(1, page);
+    limit = Math.min(100, limit);
+
+    const [products, total] = await this.productRepository.findAndCount({
+      skip: (page - 1) * limit,
+      take: limit,
+    });
+
+    return {
+      data: products,
+      total,
+      page,
+      lastPage: Math.ceil(total / limit),
+    };
+  }
+
   async findAll(): Promise<Product[]> {
     return this.productRepository.find();
+  }
+
+  async getSortedProducts(sort: string, order: 'ASC' | 'DESC') {
+    const validFields = ['name', 'price', 'category'];
+    if (!validFields.includes(sort)) {
+      throw new Error('Invalid sort field');
+    }
+
+    const validOrder: 'ASC' | 'DESC' =
+      order.toUpperCase() === 'DESC' ? 'DESC' : 'ASC';
+
+    return this.productRepository.find({
+      order: {
+        [sort]: validOrder,
+      },
+    });
+  }
+
+  async getFilteredProducts(priceMin?: number, priceMax?: number) {
+    const queryBuilder = this.productRepository.createQueryBuilder('product');
+
+    if (priceMin) {
+      queryBuilder.andWhere('product.price >= :priceMin', { priceMin });
+    }
+
+    if (priceMax) {
+      queryBuilder.andWhere('product.price <= :priceMax', { priceMax });
+    }
+
+    return queryBuilder.getMany();
   }
 
   async findOne(id: number): Promise<Product> {
