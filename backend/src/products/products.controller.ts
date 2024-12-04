@@ -47,8 +47,9 @@ export class ProductsController {
   async getFilteredProducts(
     @Query('priceMin') priceMin?: number,
     @Query('priceMax') priceMax?: number,
+    @Query('name') name?: string,
   ) {
-    return this.productsService.getFilteredProducts(priceMin, priceMax);
+    return this.productsService.getFilteredProducts(priceMin, priceMax, name);
   }
 
   @Get(':id')

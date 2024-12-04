@@ -52,7 +52,11 @@ export class ProductsService {
     });
   }
 
-  async getFilteredProducts(priceMin?: number, priceMax?: number) {
+  async getFilteredProducts(
+    priceMin?: number,
+    priceMax?: number,
+    name?: string,
+  ) {
     const queryBuilder = this.productRepository.createQueryBuilder('product');
 
     if (priceMin) {
@@ -61,6 +65,10 @@ export class ProductsService {
 
     if (priceMax) {
       queryBuilder.andWhere('product.price <= :priceMax', { priceMax });
+    }
+
+    if (name) {
+      queryBuilder.andWhere('product.name LIKE :name', { name: `%${name}%` });
     }
 
     return queryBuilder.getMany();

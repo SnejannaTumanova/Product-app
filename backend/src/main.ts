@@ -6,9 +6,14 @@ import { join } from 'path';
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
-  // Делаем папку доступной для статических файлов
   app.useStaticAssets(join(__dirname, '..', 'uploads'));
 
-  await app.listen(3000); // Запускаем сервер на порту 3000
+  app.enableCors({
+    origin: 'http://localhost:3001',
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type, Authorization',
+  });
+
+  await app.listen(3000);
 }
 bootstrap();
