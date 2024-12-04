@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { ProductsModule } from './products/products.module';
+import { Product } from './entities/product.entity';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
@@ -16,10 +17,13 @@ dotenv.config();
       username: process.env.DB_USER || 'postgres',
       password: process.env.DB_PASSWORD || '23E57sQl',
       database: process.env.DB_NAME || 'shop',
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      entities: [Product],
       synchronize: true,
+      logging: true,
     }),
     ProductsModule,
   ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

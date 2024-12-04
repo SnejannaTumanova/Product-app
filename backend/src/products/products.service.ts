@@ -1,7 +1,7 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Product } from './product.entity';
+import { Product } from '../entities/product.entity';
 
 @Injectable()
 export class ProductsService {
@@ -37,19 +37,16 @@ export class ProductsService {
   }
 
   async getSortedProducts(sort: string, order: 'ASC' | 'DESC') {
-    const validFields = ['name', 'price', 'category'];
+    const validFields = ['name', 'price'];
     if (!validFields.includes(sort)) {
       throw new Error('Invalid sort field');
     }
 
-    const validOrder: 'ASC' | 'DESC' =
-      order.toUpperCase() === 'DESC' ? 'DESC' : 'ASC';
+    const query = this.productRepository
+      .createQueryBuilder('product')
+      .orderBy(sort === 'price' ? 'product.price' : `product.${sort}`, order);
 
-    return this.productRepository.find({
-      order: {
-        [sort]: validOrder,
-      },
-    });
+    return query.getMany();
   }
 
   async getFilteredProducts(
@@ -59,23 +56,27 @@ export class ProductsService {
   ) {
     const queryBuilder = this.productRepository.createQueryBuilder('product');
 
-    if (priceMin) {
+    if (priceMin !== undefined) {
       queryBuilder.andWhere('product.price >= :priceMin', { priceMin });
     }
 
-    if (priceMax) {
+    if (priceMax !== undefined) {
       queryBuilder.andWhere('product.price <= :priceMax', { priceMax });
     }
 
     if (name) {
-      queryBuilder.andWhere('product.name LIKE :name', { name: `%${name}%` });
+      queryBuilder.andWhere('product.name ILIKE :name', { name: `%${name}%` });
     }
 
     return queryBuilder.getMany();
   }
 
   async findOne(id: number): Promise<Product> {
-    return this.productRepository.findOne({ where: { id } });
+    const product = await this.productRepository.findOne({ where: { id } });
+    if (!product) {
+      throw new NotFoundException(`Product with ID ${id} not found`);
+    }
+    return product;
   }
 
   async update(id: number, productData: Partial<Product>): Promise<Product> {
@@ -84,6 +85,9 @@ export class ProductsService {
   }
 
   async remove(id: number): Promise<void> {
-    await this.productRepository.delete(id);
+    const result = await this.productRepository.delete(id);
+    if (result.affected === 0) {
+      throw new NotFoundException(`Product with ID ${id} not found`);
+    }
   }
 }

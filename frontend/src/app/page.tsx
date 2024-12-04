@@ -1,10 +1,24 @@
-import ProductCatalog from './catalog/page';
+'use client';
+import React, { useState } from 'react';
+import Navbar from './NavBar';
+import ProductCatalog from './catalog/ProductCatalog';
+import ProductManagement from './managment/ProductManagement';
 
-export default function Home() {
+const App = () => {
+  const [currentPage, setCurrentPage] = useState<string>('catalog');
+
+  const handleNavigate = (page: string) => {
+    setCurrentPage(page);
+  };
+
   return (
     <div>
-      <h1>Product Catalog</h1>
-      <ProductCatalog />
+      <Navbar onNavigate={handleNavigate} />
+      <div>
+        {currentPage === 'catalog' ? <ProductCatalog /> : <ProductManagement />}
+      </div>
     </div>
   );
-}
+};
+
+export default App;

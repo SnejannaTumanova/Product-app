@@ -11,18 +11,20 @@ import {
   Query,
 } from '@nestjs/common';
 import { ProductsService } from './products.service';
-import { Product } from './product.entity';
+import { Product } from '../entities/product.entity';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 import { extname } from 'path';
+import { CreateProductDto } from './dto/create-product.dto';
+import { UpdateProductDto } from './dto/update-product.dto';
 
 @Controller('products')
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
   @Post()
-  create(@Body() productData: Partial<Product>): Promise<Product> {
-    return this.productsService.create(productData);
+  create(@Body() createProductDto: CreateProductDto): Promise<Product> {
+    return this.productsService.create(createProductDto);
   }
 
   @Get()
@@ -60,9 +62,9 @@ export class ProductsController {
   @Put(':id')
   update(
     @Param('id') id: string,
-    @Body() productData: Partial<Product>,
+    @Body() updateProductDto: UpdateProductDto,
   ): Promise<Product> {
-    return this.productsService.update(+id, productData);
+    return this.productsService.update(+id, updateProductDto);
   }
 
   @Delete(':id')
