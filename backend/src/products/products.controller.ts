@@ -28,30 +28,24 @@ export class ProductsController {
   }
 
   @Get()
-  findAll(): Promise<Product[]> {
-    return this.productsService.findAll();
-  }
-
-  @Get('paginated')
-  async getProducts(@Query('page') page = 1, @Query('limit') limit = 10) {
-    return this.productsService.getPaginatedProducts(page, limit);
-  }
-
-  @Get('sorted')
-  async getSortedProducts(
+  async getProducts(
+    @Query('page') page = 1,
+    @Query('limit') limit = 10,
     @Query('sort') sort = 'name',
     @Query('order') order: 'ASC' | 'DESC' = 'ASC',
-  ) {
-    return this.productsService.getSortedProducts(sort, order);
-  }
-
-  @Get('filtered')
-  async getFilteredProducts(
     @Query('priceMin') priceMin?: number,
     @Query('priceMax') priceMax?: number,
     @Query('name') name?: string,
   ) {
-    return this.productsService.getFilteredProducts(priceMin, priceMax, name);
+    return this.productsService.getProducts({
+      page,
+      limit,
+      sort,
+      order,
+      priceMin,
+      priceMax,
+      name,
+    });
   }
 
   @Get(':id')

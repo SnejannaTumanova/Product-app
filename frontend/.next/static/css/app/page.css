@@ -1,0 +1,169 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/Navbar/Navbar.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.Navbar_nav__HqJkY {
+  display: flex;
+  justify-content: space-around;
+  margin: 5vh;
+  padding: 2vh;
+  border-radius: 3vw;
+  box-shadow: 10px 10px 6px rgb(56, 56, 56);
+  background-color: black;
+}
+
+.Navbar_catalog__ya1Jo {
+  padding: 1vh;
+  border-radius: 1vw;
+  box-shadow: 3px 3px 2px rgba(151, 148, 255, 0.63);
+  background-color: rgb(38, 9, 79);
+  color: aliceblue;
+}
+
+.Navbar_catalog__ya1Jo:hover {
+  border-color: rgb(220, 64, 255);
+  box-shadow: 3px 3px 2px rgb(151, 148, 255);
+  background-color: rgb(27, 5, 57);
+}
+
+.Navbar_managment__iqwdF {
+  padding: 1vh;
+  border-radius: 1vw;
+  box-shadow: 3px 3px 2px rgba(148, 184, 255, 0.63);
+  background-color: rgb(24, 12, 94);
+  color: aliceblue;
+}
+
+.Navbar_managment__iqwdF:hover {
+  border-color: rgb(67, 64, 255);
+  box-shadow: 3px 3px 2px rgb(148, 182, 255);
+  background-color: rgb(7, 5, 57);
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/catalog/ProductCatalog.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+.ProductCatalog_catalog__Hkfy_ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+}
+
+.ProductCatalog_filters__R_WbL {
+  display: flex;
+  gap: 3vw;
+  background-color: rgba(50, 36, 99, 0.695);
+  padding: 2vh;
+  border-radius: 1vw;
+  box-shadow: 6px 6px 3px rgba(113, 86, 151, 0.5),
+    -6px -6px 3px rgba(113, 86, 151, 0.5), 6px -6px 3px rgba(113, 86, 151, 0.5),
+    -6px 6px 3px rgba(113, 86, 151, 0.5);
+}
+
+.ProductCatalog_filters__R_WbL label {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.ProductCatalog_filters__R_WbL label input {
+  padding: 1vh;
+  border-radius: 1vh;
+}
+
+.ProductCatalog_filters__R_WbL label input:hover {
+  border-color: aliceblue;
+}
+
+.ProductCatalog_filters__R_WbL button {
+  display: flex;
+  gap: 1vw;
+  justify-content: center;
+  justify-items: center;
+  border-radius: 1vw;
+  max-width: min-content;
+  max-height: 6vh;
+  padding: 1vh;
+  margin-top: 1%;
+}
+
+.ProductCatalog_filters__R_WbL button:hover {
+  border-color: rgba(45, 21, 67, 0.603);
+  box-shadow: 3px 3px 1.5px rgba(255, 255, 255, 0.533);
+}
+
+.ProductCatalog_sort__0MCF_ {
+  padding: 1vh;
+  border-radius: 1vw;
+  background-color: rgba(113, 86, 151, 0.5);
+}
+
+.ProductCatalog_sort__0MCF_:hover {
+  box-shadow: 3px 3px 1.5px rgba(176, 150, 212, 0.5),
+    -3px -3px 1.5px rgba(176, 150, 212, 0.5),
+    3px -3px 1.5px rgba(176, 150, 212, 0.5),
+    -3px 3px 1.5px rgba(176, 150, 212, 0.5);
+  color: aliceblue;
+}
+
+.ProductCatalog_table__TWfXh {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 2vh;
+}
+
+.ProductCatalog_column__l_gWB {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.ProductCatalog_rowHead___QcIp {
+  display: flex;
+  justify-content: left;
+  gap: 4vh;
+  background-color: #653dd263;
+  font-weight: bold;
+  color: rgb(35, 9, 120);
+  /* -webkit-text-stroke: 0.7px rgb(62, 22, 155); */
+}
+
+.ProductCatalog_rowHead___QcIp span {
+  min-width: 200px;
+  padding: 2vh;
+}
+
+.ProductCatalog_row__3yRMO {
+  display: flex;
+  gap: 5vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #3e149f2e;
+}
+
+.ProductCatalog_row__3yRMO span {
+  justify-content: left;
+  min-width: 200px;
+  padding: 1.2vh;
+}
+
+.ProductCatalog_photo__x0vKh {
+  background-color: #a789ec2e;
+}
+
+.ProductCatalog_pag__C5G1c {
+  padding: 0.5vh;
+  border-radius: 1vh;
+  background-color: #13062992;
+  color: aliceblue;
+  margin: 1vw;
+}
+
+.ProductCatalog_pag__C5G1c:hover {
+  background-color: #12032c92;
+  color: aliceblue;
+  box-shadow: 3px 3px 2px rgba(27, 3, 72, 0.576);
+}
+

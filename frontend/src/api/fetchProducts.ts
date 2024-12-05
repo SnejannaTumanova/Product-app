@@ -1,35 +1,27 @@
-import { Product } from '@/types';
+import { FetchProductsParams, Product } from '@/types';
 
-interface FetchProductsParams {
-  page: number;
-  sort: string;
-  order: 'ASC' | 'DESC';
-  minPrice?: number | '';
-  maxPrice?: number | '';
-  nameFilter?: string;
-}
+const fetchProducts = (filters: FetchProductsParams) => {
+  const query = new URLSearchParams();
+  const transformedFilters = {
+    page: filters.page,
+    limit: 10,
+    sort: filters.sort,
+    order: filters.order,
+    priceMin: filters.priceMin,
+    priceMax: filters.priceMax,
+    name: filters.name,
+  };
 
-export const fetchProducts = async (
-  params: FetchProductsParams
-): Promise<Product[]> => {
-  const { page, sort, order, minPrice, maxPrice, nameFilter } = params;
+  Object.entries(transformedFilters).forEach(([key, value]) => {
+    if (value !== undefined && value !== '') {
+      query.append(key, String(value));
+    }
+  });
 
-  let sortOrFilter = minPrice || maxPrice || nameFilter ? 'filtered' : 'sorted';
-
-  let url = `http://localhost:3000/products/${sortOrFilter}?page=${page}&sort=${sort}&order=${order}`;
-
-  if (minPrice) {
-    url += `&priceMin=${minPrice}`;
-  }
-  if (maxPrice) {
-    url += `&priceMax=${maxPrice}`;
-  }
-  if (nameFilter) {
-    url += `&name=${nameFilter}`;
-  }
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log('data', data);
-  console.log('data.price type', typeof data[0].price);
-  return data as Product[];
+  const url = `http://localhost:3000/products?${query.toString()}`;
+  return fetch(url)
+    .then((response) => response.json())
+    .then((data) => data.data);
 };
+
+export default fetchProducts;

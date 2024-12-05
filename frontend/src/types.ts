@@ -12,3 +12,13 @@ export interface Product {
   sku: string;
   photo: string | null;
 }
+
+export interface FetchProductsParams {
+  page?: number;
+  limit?: number;
+  sort?: string;
+  order?: 'ASC' | 'DESC';
+  priceMin?: number;
+  priceMax?: number;
+  name?: string;
+}

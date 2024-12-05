@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import Navbar from './NavBar';
+import Navbar from './Navbar/NavBar';
 import ProductCatalog from './catalog/ProductCatalog';
 import ProductManagement from './managment/ProductManagement';
 
