@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar/NavBar';
 import ProductCatalog from './catalog/ProductCatalog';
-import ProductManagement from './managment/ProductManagement';
+import ProductManagement from './managment/ProductManagement/ProductManagement';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState<string>('catalog');

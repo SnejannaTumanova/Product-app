@@ -1,5 +1,4 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
-import { Transform } from 'class-transformer';
 
 @Entity('products')
 export class Product {
@@ -20,4 +19,13 @@ export class Product {
 
   @Column({ nullable: true })
   photo: string | null;
+
+  constructor() {
+    this.id = 0;
+    this.name = '';
+    this.price = 0;
+    this.description = '';
+    this.sku = '';
+    this.photo = null;
+  }
 }

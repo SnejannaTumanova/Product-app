@@ -1,9 +1,10 @@
 import { Product } from '@/types';
+import styles from './page.module.css';
 
 const ProductDetail = ({ product }: { product: Product }) => {
   return (
-    <div>
-      <h1>{product.name}</h1>
+    <div className={styles.product}>
+      <h1 className={styles.name}>{product.name}</h1>
       <img
         src={
           product.photo
@@ -12,13 +13,13 @@ const ProductDetail = ({ product }: { product: Product }) => {
         }
         alt={product.name}
       />
-      <p>
+      <p className={styles.price}>
         <strong>Price:</strong> ${product.price}
       </p>
-      <p>
+      <p className={styles.sku}>
         <strong>SKU:</strong> {product.sku}
       </p>
-      <p>
+      <p className={styles.description}>
         <strong>Description:</strong> {product.description}
       </p>
     </div>

@@ -1,0 +1,16 @@
+.back {
+  margin-left: 10vh;
+  padding: 1vh;
+  border-radius: 2vh;
+  box-shadow: 3px 3px 1.5px rgba(152, 148, 245, 0.5),
+    -3px -3px 1.5px rgba(152, 148, 245, 0.5),
+    3px -3px 1.5px rgba(152, 148, 245, 0.5),
+    -3px 3px 1.5px rgba(152, 148, 245, 0.5);
+}
+
+.back:hover {
+  box-shadow: 3px 3px 1.5px rgba(165, 160, 255, 0.8),
+    -3px -3px 1.5px rgba(165, 160, 255, 0.7),
+    3px -3px 1.5px rgba(165, 160, 255, 0.7),
+    -3px 3px 1.5px rgba(165, 160, 255, 0.7);
+}

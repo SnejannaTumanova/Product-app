@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import AddProduct from './AddProduct';
-import EditProduct from './EditProduct';
-import ProductList from './ProductList';
+import AddProduct from '../AddProduct/AddProduct';
+import EditProduct from '../EditProduct/EditProduct';
+import ProductList from '../ProductList/ProductList';
 import { Product } from '@/types';
+import styles from './ProductManagement.module.css';
 
 const ProductManagement = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -58,7 +59,9 @@ const ProductManagement = () => {
     <div>
       {showProductDetail ? (
         <div>
-          <button onClick={closeProductDetail}>Back</button>
+          <button onClick={closeProductDetail} className={styles.back}>
+            Back
+          </button>
           {selectedProduct && (
             <ProductList
               products={[]}

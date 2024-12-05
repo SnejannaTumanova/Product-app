@@ -1,0 +1,63 @@
+.edit {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+  margin: 2vw;
+  background-color: rgba(62, 98, 195, 0.724);
+  border-radius: 3vw;
+  padding: 1vw;
+  box-shadow: 3px 3px 1.5px rgba(148, 185, 245, 0.5),
+    -3px -3px 1.5px rgba(148, 185, 245, 0.5),
+    3px -3px 1.5px rgba(148, 185, 245, 0.5),
+    -3px 3px 1.5px rgba(148, 185, 245, 0.5);
+}
+
+.form input {
+  padding: 1vh;
+  border-radius: 2vh;
+  min-height: 2vw;
+}
+
+.form input:hover {
+  box-shadow: 3px 3px 1.5px rgba(118, 167, 246, 0.7),
+    -3px -3px 1.5px rgba(118, 167, 246, 0.7),
+    3px -3px 1.5px rgba(118, 167, 246, 0.7),
+    -3px 3px 1.5px rgba(118, 167, 246, 0.7);
+}
+
+.form textarea {
+  padding: 1vh;
+  border-radius: 2vh;
+}
+
+.form textarea:hover {
+  box-shadow: 3px 3px 1.5px rgba(118, 167, 246, 0.7),
+    -3px -3px 1.5px rgba(118, 167, 246, 0.7),
+    3px -3px 1.5px rgba(118, 167, 246, 0.7),
+    -3px 3px 1.5px rgba(118, 167, 246, 0.7);
+}
+
+.form button {
+  padding: 1vh;
+  border-radius: 2vh;
+  box-shadow: 3px 3px 1.5px rgba(165, 215, 255, 0.6),
+    -3px -3px 1.5px rgba(165, 215, 255, 0.6),
+    3px -3px 1.5px rgba(165, 215, 255, 0.6),
+    -3px 3px 1.5px rgba(165, 215, 255, 0.6);
+}
+
+.form button:hover {
+  box-shadow: 3px 3px 1.5px rgba(118, 167, 246, 0.7),
+    -3px -3px 1.5px rgba(118, 167, 246, 0.7),
+    3px -3px 1.5px rgba(118, 167, 246, 0.7),
+    -3px 3px 1.5px rgba(118, 167, 246, 0.7);
+}

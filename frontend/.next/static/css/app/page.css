@@ -167,3 +167,242 @@
   box-shadow: 3px 3px 2px rgba(27, 3, 72, 0.576);
 }
 
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/managment/AddProduct/AddProduct.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************/
+.AddProduct_form__MHNyo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+  margin: 2vw;
+  background-color: rgba(16, 16, 219, 0.859);
+  border-radius: 3vw;
+  padding: 1vw;
+  box-shadow: 3px 3px 1.5px rgba(152, 148, 245, 0.5),
+    -3px -3px 1.5px rgba(152, 148, 245, 0.5),
+    3px -3px 1.5px rgba(152, 148, 245, 0.5),
+    -3px 3px 1.5px rgba(152, 148, 245, 0.5);
+}
+
+.AddProduct_form__MHNyo input {
+  padding: 1vh;
+  border-radius: 2vh;
+  min-height: 2vw;
+}
+
+.AddProduct_form__MHNyo input:hover {
+  box-shadow: 3px 3px 1.5px rgba(152, 148, 245, 0.5),
+    -3px -3px 1.5px rgba(152, 148, 245, 0.5),
+    3px -3px 1.5px rgba(152, 148, 245, 0.5),
+    -3px 3px 1.5px rgba(152, 148, 245, 0.5);
+}
+
+.AddProduct_form__MHNyo textarea {
+  padding: 1vh;
+  border-radius: 2vh;
+}
+
+.AddProduct_form__MHNyo textarea:hover {
+  box-shadow: 3px 3px 1.5px rgba(152, 148, 245, 0.5),
+    -3px -3px 1.5px rgba(152, 148, 245, 0.5),
+    3px -3px 1.5px rgba(152, 148, 245, 0.5),
+    -3px 3px 1.5px rgba(152, 148, 245, 0.5);
+}
+
+.AddProduct_form__MHNyo button {
+  padding: 1vh;
+  border-radius: 2vh;
+  box-shadow: 3px 3px 1.5px rgba(152, 148, 245, 0.5),
+    -3px -3px 1.5px rgba(152, 148, 245, 0.5),
+    3px -3px 1.5px rgba(152, 148, 245, 0.5),
+    -3px 3px 1.5px rgba(152, 148, 245, 0.5);
+}
+
+.AddProduct_form__MHNyo button:hover {
+  box-shadow: 3px 3px 1.5px rgba(165, 160, 255, 0.8),
+    -3px -3px 1.5px rgba(165, 160, 255, 0.7),
+    3px -3px 1.5px rgba(165, 160, 255, 0.7),
+    -3px 3px 1.5px rgba(165, 160, 255, 0.7);
+}
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/managment/EditProduct/EditProduct.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************/
+.EditProduct_edit__3pcNW {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.EditProduct_form__MV2uu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+  margin: 2vw;
+  background-color: rgba(62, 98, 195, 0.724);
+  border-radius: 3vw;
+  padding: 1vw;
+  box-shadow: 3px 3px 1.5px rgba(148, 185, 245, 0.5),
+    -3px -3px 1.5px rgba(148, 185, 245, 0.5),
+    3px -3px 1.5px rgba(148, 185, 245, 0.5),
+    -3px 3px 1.5px rgba(148, 185, 245, 0.5);
+}
+
+.EditProduct_form__MV2uu input {
+  padding: 1vh;
+  border-radius: 2vh;
+  min-height: 2vw;
+}
+
+.EditProduct_form__MV2uu input:hover {
+  box-shadow: 3px 3px 1.5px rgba(118, 167, 246, 0.7),
+    -3px -3px 1.5px rgba(118, 167, 246, 0.7),
+    3px -3px 1.5px rgba(118, 167, 246, 0.7),
+    -3px 3px 1.5px rgba(118, 167, 246, 0.7);
+}
+
+.EditProduct_form__MV2uu textarea {
+  padding: 1vh;
+  border-radius: 2vh;
+}
+
+.EditProduct_form__MV2uu textarea:hover {
+  box-shadow: 3px 3px 1.5px rgba(118, 167, 246, 0.7),
+    -3px -3px 1.5px rgba(118, 167, 246, 0.7),
+    3px -3px 1.5px rgba(118, 167, 246, 0.7),
+    -3px 3px 1.5px rgba(118, 167, 246, 0.7);
+}
+
+.EditProduct_form__MV2uu button {
+  padding: 1vh;
+  border-radius: 2vh;
+  box-shadow: 3px 3px 1.5px rgba(165, 215, 255, 0.6),
+    -3px -3px 1.5px rgba(165, 215, 255, 0.6),
+    3px -3px 1.5px rgba(165, 215, 255, 0.6),
+    -3px 3px 1.5px rgba(165, 215, 255, 0.6);
+}
+
+.EditProduct_form__MV2uu button:hover {
+  box-shadow: 3px 3px 1.5px rgba(118, 167, 246, 0.7),
+    -3px -3px 1.5px rgba(118, 167, 246, 0.7),
+    3px -3px 1.5px rgba(118, 167, 246, 0.7),
+    -3px 3px 1.5px rgba(118, 167, 246, 0.7);
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/product/[id]/page.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+.page_product__2RyUg {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(47, 17, 182, 0.5);
+  padding: 2vh;
+  border-radius: 2vw;
+  border: 6px double white;
+}
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/managment/ProductList/ProductList.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************/
+.ProductList_list__yvJSJ {
+  margin: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+}
+
+.ProductList_table__zFfOm {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 2vh;
+}
+
+.ProductList_column__qUa_g {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.ProductList_rowHead__wj_cm {
+  display: flex;
+  justify-content: left;
+  gap: 4vh;
+  background-color: #104ae977;
+  font-weight: bold;
+  color: rgb(5, 3, 135);
+  /* -webkit-text-stroke: 0.7px rgb(62, 22, 155); */
+}
+
+.ProductList_rowHead__wj_cm span {
+  min-width: 200px;
+  padding: 2vh;
+}
+
+.ProductList_row__ZSEiL {
+  display: flex;
+  gap: 5vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #3d65d263;
+}
+
+.ProductList_row__ZSEiL span {
+  justify-content: left;
+  min-width: 200px;
+  padding: 1.2vh;
+}
+
+.ProductList_row__ZSEiL span button {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  justify-content: space-around;
+  justify-items: center;
+  border-radius: 1vw;
+  min-width: 100px;
+  max-width: min-content;
+  padding: 1vh;
+  margin-top: 1%;
+}
+
+.ProductList_linkProduct__jV8rc {
+  color: blue;
+  background-color: #6b8af0b8;
+}
+
+.ProductList_linkProduct__jV8rc:hover {
+  color: rgb(10, 10, 118);
+  background-color: #6cabf9;
+  cursor: -webkit-grabbing;
+}
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/managment/ProductManagement/ProductManagement.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************/
+.ProductManagement_back__cVj0e {
+  margin-left: 10vh;
+  padding: 1vh;
+  border-radius: 2vh;
+  box-shadow: 3px 3px 1.5px rgba(152, 148, 245, 0.5),
+    -3px -3px 1.5px rgba(152, 148, 245, 0.5),
+    3px -3px 1.5px rgba(152, 148, 245, 0.5),
+    -3px 3px 1.5px rgba(152, 148, 245, 0.5);
+}
+
+.ProductManagement_back__cVj0e:hover {
+  box-shadow: 3px 3px 1.5px rgba(165, 160, 255, 0.8),
+    -3px -3px 1.5px rgba(165, 160, 255, 0.7),
+    3px -3px 1.5px rgba(165, 160, 255, 0.7),
+    -3px 3px 1.5px rgba(165, 160, 255, 0.7);
+}
+

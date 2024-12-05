@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import styles from './AddProduct.module.css';
 
 const AddProduct = ({ onAdd }: { onAdd: () => void }) => {
   const [name, setName] = useState('');
@@ -22,13 +23,18 @@ const AddProduct = ({ onAdd }: { onAdd: () => void }) => {
 
     if (response.ok) {
       onAdd();
+      setName('');
+      setPrice('');
+      setDescription('');
+      setSku('');
+      setPhoto('');
     } else {
       console.error('Error adding product');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <input
         type="text"
         value={name}

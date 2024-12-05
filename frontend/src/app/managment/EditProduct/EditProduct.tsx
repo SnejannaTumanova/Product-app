@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import styles from './EditProduct.module.css';
 
 const EditProduct = ({
   productId,
@@ -62,52 +63,55 @@ const EditProduct = ({
   if (!product) return <div>Loading...</div>;
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-      <label>
-        Price:
-        <input
-          type="number"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-        />
-      </label>
-      <label>
-        Description:
-        <textarea
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          placeholder="Description"
-        />
-      </label>
-      <label>
-        SKU:
-        <input
-          type="text"
-          value={sku}
-          onChange={(e) => setSku(e.target.value)}
-          placeholder="SKU"
-          required
-        />
-      </label>
-      <label>
-        Photo URL:
-        <input
-          type="text"
-          value={photo}
-          onChange={(e) => setPhoto(e.target.value)}
-          placeholder="Photo URL"
-        />
-      </label>
-      <button type="submit">Update Product</button>
-    </form>
+    <div className={styles.edit}>
+      <span>Changing the product - {name}</span>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <label>
+          Name:
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+        <label>
+          Price:
+          <input
+            type="number"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+          />
+        </label>
+        <label>
+          Description:
+          <textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Description"
+          />
+        </label>
+        <label>
+          SKU:
+          <input
+            type="text"
+            value={sku}
+            onChange={(e) => setSku(e.target.value)}
+            placeholder="SKU"
+            required
+          />
+        </label>
+        <label>
+          Photo URL:
+          <input
+            type="text"
+            value={photo}
+            onChange={(e) => setPhoto(e.target.value)}
+            placeholder="Photo URL"
+          />
+        </label>
+        <button type="submit">Update Product</button>
+      </form>
+    </div>
   );
 };
 
