@@ -16,4 +16,12 @@ export class CreateProductDto {
   @IsOptional()
   @IsString()
   photo?: string;
+
+  constructor() {
+    this.name = '';
+    this.price = 0;
+    this.description = '';
+    this.sku = '';
+    this.photo = '';
+  }
 }
